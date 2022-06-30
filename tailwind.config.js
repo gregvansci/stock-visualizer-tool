@@ -14,7 +14,7 @@ module.exports = {
         'palette-4': '#5C8D89',
         'palette-5': '#D1EECC',
         'primary': '#d9fcf4',
-        'secondary': '#5C8D89',
+        'secondary': '#b8f9ea',
       },
     },
   },
