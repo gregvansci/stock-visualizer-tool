@@ -1,4 +1,4 @@
-import { auth } from '../firebase/firebase-config';
+ import { auth } from '../firebase/firebase-config';
 import { signOut, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged } from "firebase/auth";
 
 
@@ -42,12 +42,22 @@ export default function Auth() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-black bg-white">
-      <h1 className="">Auth</h1>
-      <button className="btn" onClick={() => signInWithGoogle()}>Sign in with Google</button>
-      <button className="btn" onClick={() => signInWithGithub()}>Sign in with Github</button>
-      <button className="btn" onClick={() => logOut()}>Sign Out</button>
-
+    <div className="text-black bg-white h-screen">
+      <div className="drawer drawer-end">
+        <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          {/*Page content here*/}
+          <label htmlFor="my-drawer-4" className="drawer-button btn btn-primary">Open drawer</label>
+        </div> 
+        <div className="drawer-side">
+          <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
+          <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+            {/*Sidebar content here*/}
+            <li><a>Sidebar Item 1</a></li>
+            <li><a>Sidebar Item 2</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
