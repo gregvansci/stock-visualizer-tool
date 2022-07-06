@@ -3,8 +3,19 @@ import Greeting from "./components/Home/greeting";
 import Preview from "./components/Home/preview";
 import Summary from "./components/Home/summary";
 import Footer from "./components/footer";
+import ProfileDrawer from "./components/profiledrawer";
+import React, { useState } from "react";
+import { auth } from '../firebase/firebase-config';
+import { onAuthStateChanged, signOut } from "firebase/auth";
+
 
 export default function Home() {
+
+  
+
+
+
+
   return (
     <div className="drawer drawer-end"> 
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
@@ -19,13 +30,7 @@ export default function Home() {
           <Footer/>
         </div>
       </div>
-      <div className="drawer-side">
-        <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
-        <div className="menu p-4 overflow-y-auto w-80 bg-white text-black">
-          <h3 className="bg-white">Welcome Back</h3>
-          
-        </div>
-      </div>
+      <ProfileDrawer/>
     </div>
   )
 }
