@@ -4,37 +4,6 @@ import { signOut, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAut
 
 export default function Auth() {
 
-  const signInWithGoogle = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup( auth, provider )
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-  }
-  const signInWithGithub = () => {
-    const provider = new GithubAuthProvider();
-    signInWithPopup( auth, provider )
-    .then((result) => {
-      console.log(result);
-      })
-    .catch((error) => {
-        console.log(error);
-    })
-  }
-  
-  const logOut = () => {
-    signOut(auth).then(() => {
-      console.log('logout');
-    }
-    ).catch((error) => {
-      console.log(error);
-    }
-    )
-
-  }
 
   onAuthStateChanged(auth, user=>{
     console.log(`You are logged in as`, user);});
